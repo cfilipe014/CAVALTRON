@@ -2,6 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-bg.jpg";
+import cavaltronLogo from "@/assets/cavaltron-logo.png";
 
 const Hero = () => {
   const { data: heroContent } = useQuery({
@@ -40,9 +41,11 @@ const Hero = () => {
       {/* Content */}
       <div className="container relative z-10 px-4 py-20 md:py-32">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-foreground leading-tight">
-            {heroContent?.title || "Engenharia Elétrica & Automação Industrial"}
-          </h1>
+          <img 
+            src={cavaltronLogo} 
+            alt="CAVALTRON - Engenharia que impulsiona o amanhã" 
+            className="h-40 md:h-56 lg:h-64 mx-auto mb-8 animate-fade-up"
+          />
           <p className="text-lg md:text-xl lg:text-2xl mb-10 text-muted-foreground max-w-2xl mx-auto">
             {heroContent?.content || "Soluções completas em eletrônica e automação para sua indústria"}
           </p>
