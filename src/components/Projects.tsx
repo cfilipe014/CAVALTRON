@@ -30,7 +30,7 @@ const Projects = () => {
     <section className="py-20 md:py-32 bg-background">
       <div className="container px-4">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
-          | Explore alguns projetos que já desenvolvi:
+          | Explore alguns projetos já desenvolvidos por nós:
         </h2>
         <p className="text-lg text-muted-foreground mb-12 max-w-3xl">
           Cada projeto representa uma solução customizada desenvolvida com foco em resultados mensuráveis.

@@ -13,11 +13,10 @@ const Index = () => {
       <Projects />
       <Contact />
       
-      {/* Footer */}
       <footer className="bg-navy py-8">
         <div className="container px-4 text-center">
           <p className="text-muted-foreground">
-            © {new Date().getFullYear()} Engenharia Elétrica & Automação Industrial. Todos os direitos reservados.
+            © {new Date().getFullYear()} CAVALTRON - Engenharia que impulsiona o amanhã. Todos os direitos reservados.
           </p>
         </div>
       </footer>
