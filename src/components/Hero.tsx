@@ -3,38 +3,32 @@ import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-bg.jpg";
 import cavaltronLogo from "@/assets/cavaltron-logo.png";
-
 const Hero = () => {
-  const { data: heroContent } = useQuery({
+  const {
+    data: heroContent
+  } = useQuery({
     queryKey: ["site-content", "hero"],
     queryFn: async () => {
-      const { data, error } = await supabase
-        .from("site_content")
-        .select("*")
-        .eq("section", "hero")
-        .single();
-      
+      const {
+        data,
+        error
+      } = await supabase.from("site_content").select("*").eq("section", "hero").single();
       if (error) throw error;
       return data;
-    },
+    }
   });
-
   const handleCTAClick = () => {
     const contactSection = document.getElementById("contato");
     if (contactSection) {
-      contactSection.scrollIntoView({ behavior: "smooth" });
+      contactSection.scrollIntoView({
+        behavior: "smooth"
+      });
     }
   };
-
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src={heroImage} 
-          alt="Industrial Automation" 
-          className="w-full h-full object-cover"
-        />
+        <img src={heroImage} alt="Industrial Automation" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-navy/95 via-navy/90 to-navy/80" />
       </div>
 
@@ -43,20 +37,12 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center">
           <div className="relative inline-block mb-8">
             <div className="absolute inset-0 bg-accent/20 blur-3xl rounded-full animate-pulse" />
-            <img 
-              src={cavaltronLogo} 
-              alt="CAVALTRON - Engenharia que impulsiona o amanhã" 
-              className="h-40 md:h-56 lg:h-64 mx-auto relative z-10 drop-shadow-[0_0_30px_rgba(255,195,0,0.5)] animate-fade-up"
-            />
+            <img src={cavaltronLogo} alt="CAVALTRON - Engenharia que impulsiona o amanhã" className="h-40 md:h-56 lg:h-64 mx-auto relative z-10 drop-shadow-[0_0_30px_rgba(255,195,0,0.5)] animate-fade-up" />
           </div>
-          <p className="text-xl md:text-2xl lg:text-3xl mb-10 text-foreground max-w-3xl mx-auto font-medium leading-relaxed">
+          <p className="text-xl md:text-2xl lg:text-3xl mb-10 max-w-3xl mx-auto font-medium leading-relaxed text-slate-50">
             Soluções completas em <span className="text-accent font-bold">eletrônica</span> e <span className="text-accent font-bold">automação</span> para sua <span className="text-accent font-bold">indústria</span>
           </p>
-          <Button 
-            onClick={handleCTAClick}
-            size="lg"
-            className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-6 text-lg shadow-[var(--shadow-glow)] transition-all hover:shadow-[0_0_40px_hsl(46_100%_50%/0.5)]"
-          >
+          <Button onClick={handleCTAClick} size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-6 text-lg shadow-[var(--shadow-glow)] transition-all hover:shadow-[0_0_40px_hsl(46_100%_50%/0.5)]">
             {heroContent?.cta_text || "Fale Conosco"}
           </Button>
         </div>
@@ -68,8 +54,6 @@ const Hero = () => {
           <div className="w-1 h-3 bg-accent rounded-full mx-auto animate-pulse" />
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
