@@ -41,13 +41,16 @@ const Hero = () => {
       {/* Content */}
       <div className="container relative z-10 px-4 py-20 md:py-32">
         <div className="max-w-4xl mx-auto text-center">
-          <img 
-            src={cavaltronLogo} 
-            alt="CAVALTRON - Engenharia que impulsiona o amanhã" 
-            className="h-40 md:h-56 lg:h-64 mx-auto mb-8 animate-fade-up"
-          />
-          <p className="text-lg md:text-xl lg:text-2xl mb-10 text-muted-foreground max-w-2xl mx-auto">
-            {heroContent?.content || "Soluções completas em eletrônica e automação para sua indústria"}
+          <div className="relative inline-block mb-8">
+            <div className="absolute inset-0 bg-accent/20 blur-3xl rounded-full animate-pulse" />
+            <img 
+              src={cavaltronLogo} 
+              alt="CAVALTRON - Engenharia que impulsiona o amanhã" 
+              className="h-40 md:h-56 lg:h-64 mx-auto relative z-10 drop-shadow-[0_0_30px_rgba(255,195,0,0.5)] animate-fade-up"
+            />
+          </div>
+          <p className="text-xl md:text-2xl lg:text-3xl mb-10 text-foreground max-w-3xl mx-auto font-medium leading-relaxed">
+            Soluções completas em <span className="text-accent font-bold">eletrônica</span> e <span className="text-accent font-bold">automação</span> para sua <span className="text-accent font-bold">indústria</span>
           </p>
           <Button 
             onClick={handleCTAClick}
