@@ -36,11 +36,13 @@ const Hero = () => {
       <div className="container relative z-10 px-4 py-20 md:py-32">
         <div className="max-w-4xl mx-auto text-center">
           <div className="relative inline-block mb-8">
-            <div className="absolute inset-0 bg-accent/20 blur-3xl rounded-full animate-pulse" />
-            <img src={cavaltronLogo} alt="CAVALTRON - Engenharia que impulsiona o amanhã" className="h-40 md:h-56 lg:h-64 mx-auto relative z-10 drop-shadow-[0_0_30px_rgba(255,195,0,0.5)] animate-fade-up" />
+            <div className="absolute inset-0 bg-white/20 blur-3xl rounded-full animate-pulse" />
+            <div className="bg-white rounded-2xl p-6 md:p-8 relative z-10 shadow-[0_0_40px_rgba(255,255,255,0.3)]">
+              <img src={cavaltronLogo} alt="CAVALTRON - Engenharia que impulsiona o amanhã" className="h-32 md:h-48 lg:h-56 mx-auto animate-fade-up" />
+            </div>
           </div>
           <p className="text-xl md:text-2xl lg:text-3xl mb-10 max-w-3xl mx-auto font-medium leading-relaxed text-slate-50">
-            Soluções completas em <span className="text-accent font-bold">eletrônica</span> e <span className="text-accent font-bold">automação</span> para sua <span className="text-accent font-bold">indústria</span>
+            Soluções completas em <span className="text-white font-bold">eletrônica</span> e <span className="text-white font-bold">automação</span> para sua <span className="text-white font-bold">indústria</span>
           </p>
           <Button onClick={handleCTAClick} size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-6 text-lg shadow-[var(--shadow-glow)] transition-all hover:shadow-[0_0_40px_hsl(46_100%_50%/0.5)]">
             {heroContent?.cta_text || "Fale Conosco"}
