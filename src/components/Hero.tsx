@@ -52,25 +52,27 @@ const Hero = () => {
               Engenharia que impulsiona o amanhã
             </h1>
             
-            <p className="text-xl md:text-2xl lg:text-3xl text-white/90 mb-8 font-light leading-relaxed">
+            <p className="text-xl md:text-2xl lg:text-3xl text-white/90 font-light leading-relaxed">
               Soluções completas em eletrônica e automação para sua indústria
             </p>
-
-            <Button 
-              onClick={handleCTAClick} 
-              size="lg" 
-              className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all hover:scale-105"
-            >
-              {heroContent?.cta_text || "Fale Conosco"}
-            </Button>
           </div>
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce z-10">
-        <div className="w-6 h-10 border-2 border-white/50 rounded-full p-1">
-          <div className="w-1 h-3 bg-white/70 rounded-full mx-auto animate-pulse" />
+      {/* CTA Button and Scroll Indicator - Centered at Bottom */}
+      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-6 animate-fade-up" style={{ animationDelay: '0.4s' }}>
+        <Button 
+          onClick={handleCTAClick} 
+          size="lg" 
+          className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-10 py-6 text-lg shadow-[0_0_30px_hsl(46_100%_50%/0.5)] hover:shadow-[0_0_50px_hsl(46_100%_50%/0.7)] transition-all hover:scale-105"
+        >
+          {heroContent?.cta_text || "Fale Conosco"}
+        </Button>
+        
+        <div className="animate-bounce">
+          <div className="w-6 h-10 border-2 border-accent rounded-full p-1 shadow-[0_0_20px_hsl(46_100%_50%/0.4)]">
+            <div className="w-1 h-3 bg-accent rounded-full mx-auto animate-pulse" />
+          </div>
         </div>
       </div>
     </section>;
