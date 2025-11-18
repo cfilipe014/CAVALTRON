@@ -26,63 +26,40 @@ const Hero = () => {
     }
   };
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Overlay */}
+      {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img src={heroImage} alt="Industrial Automation" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-b from-navy/95 via-navy/90 to-navy/85" />
-      </div>
-
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 z-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-white/5 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="absolute inset-0 bg-navy/40" />
       </div>
 
       {/* Content */}
-      <div className="container relative z-10 px-4 py-20 md:py-32">
-        <div className="max-w-5xl mx-auto text-center">
-          {/* Logo Container with Enhanced Design */}
-          <div className="mb-12 animate-fade-up">
-            <div className="relative inline-block">
-              {/* Outer glow effect */}
-              <div className="absolute -inset-4 bg-gradient-to-r from-white/20 via-white/30 to-white/20 rounded-3xl blur-2xl opacity-75 animate-pulse" />
-              
-              {/* Main logo container */}
-              <div className="relative bg-white rounded-3xl p-8 md:p-12 shadow-2xl">
-                {/* Inner subtle glow */}
-                <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-transparent rounded-3xl" />
-                
-                {/* Logo */}
-                <img 
-                  src={cavaltronLogo} 
-                  alt="CAVALTRON - Engenharia que impulsiona o amanhã" 
-                  className="h-40 md:h-56 lg:h-72 w-auto mx-auto relative z-10 drop-shadow-lg" 
-                />
-              </div>
+      <div className="container relative z-10 px-4 py-20">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-12">
+          {/* Logo Container - Left Side */}
+          <div className="flex-shrink-0 animate-fade-up">
+            <div className="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full bg-white p-8 md:p-12 shadow-2xl flex items-center justify-center">
+              <img 
+                src={cavaltronLogo} 
+                alt="CAVALTRON" 
+                className="w-full h-full object-contain" 
+              />
             </div>
           </div>
 
-          {/* Tagline with improved hierarchy */}
-          <div className="mb-12 animate-fade-up" style={{ animationDelay: '0.2s' }}>
-            <p className="text-2xl md:text-3xl lg:text-4xl mb-4 max-w-4xl mx-auto font-light leading-relaxed text-white/90">
-              Soluções completas em
+          {/* Text Content - Right Side */}
+          <div className="flex-1 text-center md:text-left animate-fade-up" style={{ animationDelay: '0.2s' }}>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              Engenharia que impulsiona o amanhã
+            </h1>
+            
+            <p className="text-xl md:text-2xl lg:text-3xl text-white/90 mb-8 font-light leading-relaxed">
+              Soluções completas em eletrônica e automação para sua indústria
             </p>
-            <p className="text-3xl md:text-4xl lg:text-5xl mb-4 max-w-4xl mx-auto font-bold leading-tight">
-              <span className="text-white drop-shadow-[0_2px_10px_rgba(255,255,255,0.3)]">eletrônica</span>
-              {" e "}
-              <span className="text-white drop-shadow-[0_2px_10px_rgba(255,255,255,0.3)]">automação</span>
-            </p>
-            <p className="text-2xl md:text-3xl lg:text-4xl max-w-4xl mx-auto font-light leading-relaxed text-white/90">
-              para sua <span className="text-white font-bold drop-shadow-[0_2px_10px_rgba(255,255,255,0.3)]">indústria</span>
-            </p>
-          </div>
 
-          {/* CTA Button */}
-          <div className="animate-fade-up" style={{ animationDelay: '0.4s' }}>
             <Button 
               onClick={handleCTAClick} 
               size="lg" 
-              className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-10 py-7 text-xl shadow-[0_0_30px_hsl(46_100%_50%/0.4)] hover:shadow-[0_0_50px_hsl(46_100%_50%/0.6)] transition-all hover:scale-105"
+              className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all hover:scale-105"
             >
               {heroContent?.cta_text || "Fale Conosco"}
             </Button>
@@ -92,8 +69,8 @@ const Hero = () => {
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce z-10">
-        <div className="w-6 h-10 border-2 border-white/60 rounded-full p-1">
-          <div className="w-1 h-3 bg-white/80 rounded-full mx-auto animate-pulse" />
+        <div className="w-6 h-10 border-2 border-white/50 rounded-full p-1">
+          <div className="w-1 h-3 bg-white/70 rounded-full mx-auto animate-pulse" />
         </div>
       </div>
     </section>;
