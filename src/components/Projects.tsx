@@ -26,9 +26,9 @@ const Projects = () => {
       window.open(project.external_link, "_blank");
     }
   };
-  return <section className="py-20 md:py-32 bg-background">
+  return <section id="projetos" className="py-20 md:py-32 bg-background" aria-labelledby="projects-heading">
       <div className="container px-4">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">| Explore alguns projetos desenvolvidos por nós:</h2>
+        <h2 id="projects-heading" className="text-3xl md:text-4xl font-bold mb-4 text-foreground">| Explore alguns projetos desenvolvidos por nós:</h2>
         <p className="text-lg text-muted-foreground mb-12 max-w-3xl">
           Cada projeto representa uma solução customizada desenvolvida com foco em resultados mensuráveis.
         </p>
