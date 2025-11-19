@@ -5,7 +5,7 @@ import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 const Index = () => {
   return <div className="min-h-screen bg-background text-foreground">
-      <Hero className="my-0 mx-0" />
+      <Hero />
       <About />
       <Skills />
       <Projects />
