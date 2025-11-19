@@ -25,10 +25,10 @@ const Hero = () => {
       });
     }
   };
-  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden" aria-label="Hero Section">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img src={heroImage} alt="Industrial Automation" className="w-full h-full object-cover" />
+        <img src={heroImage} alt="Automação industrial com braços robóticos - CAVALTRON Engenharia" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-navy/40" />
       </div>
 

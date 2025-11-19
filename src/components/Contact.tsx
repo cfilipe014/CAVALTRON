@@ -20,9 +20,9 @@ const Contact = () => {
     const Icon = (LucideIcons as any)[iconName] || LucideIcons.Link;
     return Icon;
   };
-  return <section id="contato" className="py-20 md:py-32 bg-muted/30">
+  return <section id="contato" className="py-20 md:py-32 bg-muted/30" aria-labelledby="contact-heading">
       <div className="container px-4">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-foreground">
+        <h2 id="contact-heading" className="text-3xl md:text-4xl font-bold mb-12 text-foreground">
           | Entre em contato conosco:
         </h2>
         

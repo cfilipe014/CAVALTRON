@@ -17,10 +17,10 @@ const About = () => {
   });
 
   return (
-    <section className="py-20 md:py-32 bg-background">
+    <section id="sobre" className="py-20 md:py-32 bg-background" aria-labelledby="about-heading">
       <div className="container px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-foreground">
+          <h2 id="about-heading" className="text-3xl md:text-4xl font-bold mb-8 text-foreground">
             {aboutContent?.title || "| Sobre nós:"}
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
