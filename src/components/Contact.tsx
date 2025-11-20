@@ -89,7 +89,7 @@ const Contact = () => {
                   </CardHeader>
                   <CardContent className="text-center">
                     <p className="text-sm text-muted-foreground break-words">
-                      {contact.type === 'email' ? contact.value : 'Clique para acessar'}
+                      Clique para acessar
                     </p>
                   </CardContent>
                 </Card>
