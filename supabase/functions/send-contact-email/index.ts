@@ -26,7 +26,7 @@ const handler = async (req: Request): Promise<Response> => {
     console.log("Sending contact form email:", { name, email, phone });
 
     const emailResponse = await resend.emails.send({
-      from: "CAVALTRON Site <onboarding@resend.dev>",
+      from: "CAVALTRON Site <contato@cavaltron.com.br>",
       to: ["contato@cavaltron.com.br"],
       subject: "Solicitações de Contato via Site",
       html: `
