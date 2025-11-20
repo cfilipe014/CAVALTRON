@@ -97,11 +97,12 @@ const Contact = () => {
         })}
         </div>
 
-        <Card className="mt-12 max-w-2xl mx-auto border-border bg-card">
-          <CardHeader>
-            <CardTitle className="text-2xl text-card-foreground">Envie sua mensagem</CardTitle>
-          </CardHeader>
-          <CardContent>
+        <h3 className="text-2xl md:text-3xl font-bold mt-16 mb-8 text-foreground">
+          | Envie sua mensagem:
+        </h3>
+
+        <Card className="max-w-2xl mx-auto border-border bg-card">
+          <CardContent className="pt-6">
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
               <div>
                 <Label htmlFor="name">Nome *</Label>
